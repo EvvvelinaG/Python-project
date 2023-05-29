@@ -105,21 +105,21 @@ class GameSettings:
     about = Button()
     small_exit_button = Button()
 
-    Ground = tkinter.PhotoImage(file='Ground.png')
-    Character = tkinter.PhotoImage(file='Character.png')
-    Flashback = tkinter.PhotoImage(file='Flashback.png')
-    Door = tkinter.PhotoImage(file='Door.png')
-    Character_Revers = tkinter.PhotoImage(file='Character_Revers.png')
-    Character_Back = tkinter.PhotoImage(file='Character_Back.png')
-    Character_Front = tkinter.PhotoImage(file='Character_Front.png')
-    Boss_pic = tkinter.PhotoImage(file='Boss.png')
-    Mob = tkinter.PhotoImage(file='Mob.png')
+    Ground = tkinter.PhotoImage(file='../Ground.png')
+    Character = tkinter.PhotoImage(file='../Character.png')
+    Flashback = tkinter.PhotoImage(file='../Flashback.png')
+    Door = tkinter.PhotoImage(file='../Door.png')
+    Character_Revers = tkinter.PhotoImage(file='../Character_Revers.png')
+    Character_Back = tkinter.PhotoImage(file='../Character_Back.png')
+    Character_Front = tkinter.PhotoImage(file='../Character_Front.png')
+    Boss_pic = tkinter.PhotoImage(file='../Boss.png')
+    Mob = tkinter.PhotoImage(file='../Mob.png')
     pictures = [Ground, Ground, Character, Flashback, Door, Boss_pic, Character_Revers, Character_Back,
                 Character_Front, Mob]
 
-    Fighting_Head = tkinter.PhotoImage(file='Fighting_Head.png')
-    Fighting_Body = tkinter.PhotoImage(file='Fighting_Body.png')
-    Fighting_Legs = tkinter.PhotoImage(file='Fighting_Legs.png')
+    Fighting_Head = tkinter.PhotoImage(file='../Fighting_Head.png')
+    Fighting_Body = tkinter.PhotoImage(file='../Fighting_Body.png')
+    Fighting_Legs = tkinter.PhotoImage(file='../Fighting_Legs.png')
     Fight_Pictures = [Fighting_Head, Fighting_Body, Fighting_Legs]
 
 
@@ -143,31 +143,31 @@ root.state('zoomed')
 # root.geometry('1600x900')
 root["bg"] = '#3c3c3c'
 
-Background_Image_Forest = tkinter.PhotoImage(file='Map.png')
-Background_Image_Ladder = tkinter.PhotoImage(file='Map2.png')
-Background_Image_Desert = tkinter.PhotoImage(file='Map3.png')
-Fighting = tkinter.PhotoImage(file='Fighting.png')
-Fighting2 = tkinter.PhotoImage(file='Fighting_Boss.png')
-Fighting_Head_Boss = tkinter.PhotoImage(file='Fighting_Boss_Head.png')
-Fighting_Body_Boss = tkinter.PhotoImage(file='Fighting_Boss_Body.png')
-Fighting_Legs_Boss = tkinter.PhotoImage(file='Fighting_Boss_Legs.png')
-Journal_Bg = tkinter.PhotoImage(file='Journal.png')
+Background_Image_Forest = tkinter.PhotoImage(file='../Map.png')
+Background_Image_Ladder = tkinter.PhotoImage(file='../Map2.png')
+Background_Image_Desert = tkinter.PhotoImage(file='../Map3.png')
+Fighting = tkinter.PhotoImage(file='../Fighting.png')
+Fighting2 = tkinter.PhotoImage(file='../Fighting_Boss.png')
+Fighting_Head_Boss = tkinter.PhotoImage(file='../Fighting_Boss_Head.png')
+Fighting_Body_Boss = tkinter.PhotoImage(file='../Fighting_Boss_Body.png')
+Fighting_Legs_Boss = tkinter.PhotoImage(file='../Fighting_Boss_Legs.png')
+Journal_Bg = tkinter.PhotoImage(file='../Journal.png')
 
 Upper_Main_Menu = Menu(root)
 root.config(menu=Upper_Main_Menu)
 
 filemenu = Menu(Upper_Main_Menu, tearoff=0)
 
-Ground2 = tkinter.PhotoImage(file='Ground2.png')
+Ground2 = tkinter.PhotoImage(file='../Ground2.png')
 Small_Exit = tkinter.PhotoImage(file='Small_Exit.png')
 Skeleton = tkinter.PhotoImage(file='Skeleton.png')
 Skeleton2 = tkinter.PhotoImage(file='Skeleton2.png')
 About_Img = tkinter.PhotoImage(file='мы.jpg')
 About_Lbl = tkinter.PhotoImage(file='Разработчики.png')
-Help_Page = tkinter.PhotoImage(file='H_P.png')
-Help_Page2 = tkinter.PhotoImage(file='H_F.png')
-Help_Page3 = tkinter.PhotoImage(file='H_Q.png')
-Menu_Background = tkinter.PhotoImage(file='Background.png')
+Help_Page = tkinter.PhotoImage(file='../H_P.png')
+Help_Page2 = tkinter.PhotoImage(file='../H_F.png')
+Help_Page3 = tkinter.PhotoImage(file='../H_Q.png')
+Menu_Background = tkinter.PhotoImage(file='../Background.png')
 Close = tkinter.PhotoImage(file='Закрыть Заставку.png')
 Back = tkinter.PhotoImage(file='Назад.png')
 Start = tkinter.PhotoImage(file='Начать.png')
@@ -177,16 +177,16 @@ Help = tkinter.PhotoImage(file='Помощь.png')
 Exit = tkinter.PhotoImage(file='Выход.png')
 Again = tkinter.PhotoImage(file='Начать Заново.png')
 
-Comrade = tkinter.PhotoImage(file='Fresco.png')
-Guts = tkinter.PhotoImage(file='Guts.png')
+Comrade = tkinter.PhotoImage(file='../Fresco.png')
+Guts = tkinter.PhotoImage(file='../Guts.png')
 
-Background = tkinter.PhotoImage(file='Bg.png')
+Background = tkinter.PhotoImage(file='../Bg.png')
 Main_Background = Label(root, image=Background, bd=0)
 Main_Background.place(x=0, y=0)
 Background_Label = Label(root, image=Background_Image_Forest, bg='gray')
 
 # Получение первой локации
-Text_Map = open('Forest.txt', 'r')
+Text_Map = open('../Forest.txt', 'r')
 for i in range(GameSettings.line):
     Lines = Text_Map.readline()
     s = Lines.split()
@@ -195,23 +195,23 @@ for i in range(GameSettings.line):
 Text_Map.close()
 
 # Текстовый файл с вопросами
-Text_Question = open('Questions.txt', 'r')
+Text_Question = open('../Questions.txt', 'r')
 for i in range(Number_Of_Questions):
     Questions[i] = Text_Question.readline()
 Text_Question.close()
 
-Text_Comments = open('Comments.txt', 'r')
+Text_Comments = open('../Comments.txt', 'r')
 for i in range(Number_Of_Comments):
     Comments[i] = Text_Comments.readline()
 Text_Comments.close()
 
 # Текстовый файл с ответами
-Text_Answers = open('Answers.txt', 'r')
+Text_Answers = open('../Answers.txt', 'r')
 for i in range(Number_Of_Questions * 3):
     Answers[i] = Text_Answers.readline()
 Text_Answers.close()
 
-Text_Boss = open('Boss.txt', 'r')
+Text_Boss = open('../Boss.txt', 'r')
 for i in range(2):
     Speech[i] = Text_Boss.readline()
 Text_Boss.close()
@@ -349,11 +349,11 @@ def change_location():
     hide(GameSettings.column, GameSettings.line)
     if GameSettings.location == 1:
         Journal['fg'] = '#989898'
-        pygame.mixer.music.load('OST1.mp3')
+        pygame.mixer.music.load('../OST1.mp3')
         pygame.mixer.music.play(-1)
         GameSettings.mob_hp_const = 100
         Background_Label['image'] = Background_Image_Forest
-        lab = open('Forest.txt', 'r')
+        lab = open('../Forest.txt', 'r')
         for i in range(GameSettings.line):
             lines = lab.readline()
             s = lines.split()
@@ -364,10 +364,10 @@ def change_location():
         GameSettings.question_number = 6
         GameSettings.answer_number = GameSettings.question_number * 3
         GameSettings.mob_hp_const = 200
-        pygame.mixer.music.load('OST2.mp3')
+        pygame.mixer.music.load('../OST2.mp3')
         pygame.mixer.music.play(-1)
         Background_Label['image'] = Background_Image_Ladder
-        lab = open('Ladder.txt', 'r')
+        lab = open('../Ladder.txt', 'r')
         for i in range(GameSettings.line):
             lines = lab.readline()
             s = lines.split()
@@ -376,7 +376,7 @@ def change_location():
         lab.close()
     elif GameSettings.location == 3:
         GameSettings.mob_hp_const = 600
-        pygame.mixer.music.load('OST3.mp3')
+        pygame.mixer.music.load('../OST3.mp3')
         pygame.mixer.music.play(-1)
         Background_Label['image'] = Background_Image_Desert
         lab = open('Third.txt', 'r')
@@ -387,7 +387,7 @@ def change_location():
                 GameSettings.field[j][i] = int(s[j])
         lab.close()
     elif GameSettings.location == 4:
-        pygame.mixer.music.load('Fly me to the moon.mp3')
+        pygame.mixer.music.load('../Fly me to the moon.mp3')
         pygame.mixer.music.play(-1)
     GameSettings.buttons_Map = GameSettings.matrix(GameSettings.column, GameSettings.line)
     output(GameSettings.column, GameSettings.line)
@@ -436,7 +436,7 @@ def defeat():
     GameSettings.dodge_lvl = 0
     GameSettings.attack_lvl = 0
     GameSettings.defense_lvl = 0
-    pygame.mixer.music.load('OST4.mp3')
+    pygame.mixer.music.load('../OST4.mp3')
     pygame.mixer.music.play(-1)
 
 
@@ -472,7 +472,7 @@ def fight_back():
                     Achivement_3.place(x=1250, y=306)
                     Achivement_4.place(x=1250, y=406)
                     Journal['text'] = 'Герой погиб'
-                    pygame.mixer.music.load('End_OST.mp3')
+                    pygame.mixer.music.load('../End_OST.mp3')
                     pygame.mixer.music.play(0)
                     GameSettings.mob_hp_bar.place_forget()
                     GameSettings.hero_hp_bar.place_forget()
@@ -562,7 +562,7 @@ def attack(num):
             Sixth_Fighting_Button.place_forget()
             Seventh_Fighting_Button.place_forget()
             GameSettings.small_exit_button.place(x=1250, y=706)
-            pygame.mixer.music.load('End_OST.mp3')
+            pygame.mixer.music.load('../End_OST.mp3')
             pygame.mixer.music.play(-1)
             GameSettings.mob_hp_bar.place_forget()
             GameSettings.hero_hp_bar.place_forget()
@@ -755,7 +755,7 @@ def start_game_fun():
     GameSettings.game_start = True
     GameSettings.menu_moderator = 0
     if GameSettings.music:
-        pygame.mixer.music.load('OST1.mp3')
+        pygame.mixer.music.load('../OST1.mp3')
         pygame.mixer.music.play(-1)
         filemenu.add_command(label="Меню", command=exit_to_menu)
     GameSettings.music = False
@@ -853,7 +853,7 @@ def menu_hide():
 
 # закрытие заставки
 def opening_hide():
-    pygame.mixer.music.load('Gates.mp3')
+    pygame.mixer.music.load('../Gates.mp3')
     pygame.mixer.music.play(-1)
 
     my_label.pack_forget()
@@ -1060,7 +1060,7 @@ def output(n, m):
                 btn.place(x=1.2 * Height * i, y=1.2 * Height * j)
 
 
-pygame.mixer.music.load('Lilium.mp3')
+pygame.mixer.music.load('../Lilium.mp3')
 pygame.mixer.music.play(-1)
 pygame.mixer.music.set_volume(GameSettings.volume)
 
