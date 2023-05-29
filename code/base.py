@@ -28,7 +28,6 @@ class GameSettings:
                                                        bg='black')
 
         return GameSettings.buttons_Map
-
     volume = 1
     music = True
     right_answers = 0
